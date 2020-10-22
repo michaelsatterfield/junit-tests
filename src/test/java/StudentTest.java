@@ -18,6 +18,15 @@ public void testStudentFields(){
      assertSame("jon",jon.getName());
      assertSame(0,jon.getGrades().size());
  }
+    @Test
+    public void testAddGrade(){
+        Student jon = new Student(1l,"jon");
+        jon.addGrade(75);
+        assertSame(75,jon.getGrades().get(0));
+    }
+
+
+
 
  @Test
  public void testAverage(){
